@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stylegan2-ada-syntheticdata"
+version = "1.0.0"
+description = "StyleGAN2-ADA for synthetic defect image generation on small datasets."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "torch",
+    "torchvision",
+    "matplotlib",
+    "numpy",
+    "pillow",
+    "tqdm",
+]
+
+[project.scripts]
+stylegan2-train = "stylegan2_ada.cli:train"
+stylegan2-generate = "stylegan2_ada.cli:generate"
+
+[tool.setuptools]
+packages = ["stylegan2_ada", "stylegan2_ada.networks"]
