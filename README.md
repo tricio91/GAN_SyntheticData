@@ -162,4 +162,4 @@ time.
 
 ## License
 
-MIT — see `LICENSE`.
+MIT.
